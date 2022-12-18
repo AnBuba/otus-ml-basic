@@ -1,3 +1,3 @@
 # otus-ml-basic
 
-Выполнение домашнего задания на курсе Machine Learning (Basic).
+Выполнение домашнего задания на курсе Machine Learning (Basic) и примеры из лекций.
