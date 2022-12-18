@@ -1,5 +1,4 @@
 import numpy as np
-import scipy.spatial.distance as ds
 
 def cal_euclidean(a, b):
     sq = np.square(a - b)
@@ -8,12 +7,15 @@ def cal_euclidean(a, b):
     return distance
 
 def cal_manhattan(a, b):
-    a = abs(a - b)
+    a = np.abs(a - b)
     distance = np.sum(a)
     return distance
 
 def cal_cosine(a, b):
-    distance = ds.cosine(a, b)
+    n1 = np.dot(a, b)
+    a_1 = np.sqrt(np.sum(np.square(a)))
+    b_1 = np.sqrt(np.sum(np.square(b)))
+    distance = 1.0 - (n1 / (a_1 * b_1))
     return distance
 
 a = np.random.randint(-10, 10, size=10)
