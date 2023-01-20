@@ -1,4 +1,4 @@
-# ?? Не работатет. Пересмотреть , отвлеклась
+# try, except
 class AgeTooSmall(Exception):
     pass
 
@@ -54,15 +54,14 @@ class Dev(User):
 
 def get_users():
     try:
-        user_1 = Manager('i.ivanov', 22)
+        user_1 = Manager('i.ivanov', 23)
         user_2 = Dev('b.borisov', 32, 'junior')
         user_3 = Manager('o.olegov', 30)
         users = [user_1, user_2, user_3]
         return users
     except Exception as e:
         raise UserInitError(e)
-    finally:
-        return []
+
 
 
 try:
